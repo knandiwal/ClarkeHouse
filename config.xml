@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.ABG.contributionlimits"
+    id        = "com.CH4L.ClarkeHouse"
     version   = "1.0.0">
 
-<name>Contribution Limits</name>
+<name>Clarke House</name>
 
 <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
@@ -31,10 +31,10 @@
 <icon src="icons/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
 
 <description>
-ABG powered - Contribution Limits.
+CH4L - Clarke House Boys
 </description>
 
-<author href="http://abgil.com" email="information.services@abgemail.com">
+<author href="akknobloch.com" email="akknobloch3@gmail.com">
 Austin Knobloch
 </author>
 
