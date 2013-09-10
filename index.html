@@ -1,0 +1,437 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi" />
+<meta charset="utf-8">
+<title>Contribution Limits</title>
+<link rel="stylesheet" type="text/css" href="includes/style1.css">
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/><style type="text/css">
+.ui-grid-b {
+	text-decoration: underline;
+	color: #000;
+}
+
+#page2 div a {
+	text-align: right;
+}
+</style>
+
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="phonegap.js"></script>
+<script>
+document.addEventListener("deviceready", function() {
+// before this event, window.open likely won't work properly
+}, false);
+</script>
+
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+<!--Script to make the Calculator calculations-->
+<script>
+function sum()
+    {
+
+        var Income = document.getElementById('Income').value;
+        var Percent = document.getElementById('Percent').value;
+		var Match = document.getElementById('Match').value;
+		
+
+            {result = parseInt(Income)*(Percent);
+			totalMatch = (Match)*(result);
+			total = (result)+(totalMatch);
+            document.getElementById("showContrib").innerHTML = "$"+(result);
+			document.getElementById("showMatch").innerHTML = "$"+(totalMatch);
+			document.getElementById("showTotal").innerHTML = "$"+(total);}
+    }
+</script>
+</head> 
+<body> 
+
+
+<!--Homepage-->
+<div data-role="page" id="page">
+	<div class="header" class="ui-header"><!-- header -->
+    <br />
+		<div class="logo"></div>
+	</div><!-- /header -->
+	
+    <br /><br />
+	<div data-role="content">
+	  <div data-role="navbar" data-iconpos="top" style="background:none">
+            <ul>
+                <li>
+                    <a href="#page6" data-transition="slide" style="border:hidden; background:none"><img src="images/page_search.png" height="75px"><br />
+                    <span class="ButtonText">View Current Limits</span> </a>
+                </li>
+                <li>
+                    <a href="#page2" data-transition="slide" style="border:hidden; background:none"><img src="images/calculator.png" height="75px"><br />
+                    <span class="ButtonText">Calculate <br/>Your Contribution</span> </a>
+                </li>
+        </ul>
+      </div>
+      <br /><br /><br />
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#" data-transition="slide" style="border:hidden; background:none"><img src="images/chart2.png" height="75px"><br />
+                    <span class="ButtonText">Plan Design</span> </a>
+                </li>
+                <li>
+                    <a href="#contactus" data-transition="slide" style="border:hidden; background:none"><img src="images/process.png" height="75px"><br />
+                    <span class="ButtonText">Contact Us</span> </a>
+                </li>
+            </ul>
+        </div>	
+	</div><!-- /content -->
+	<div data-role="footer" data-position="fixed">
+    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="page2">
+	<div class="header">
+    <br />
+		<div class="logo"></div>
+	</div><!-- /header -->
+	<div data-role="header">
+    	<a href="#page" data-icon="back" >Back</a>
+		<h1>Calculate Your Contribution</h1>
+	</div><!-- /textheader -->
+	<div data-role="content">
+    <div>*This is calculated on a Pre-Tax basis</div>
+      <div data-role="fieldcontain">
+        <label for="slider" style="width:auto"><strong>Step 1:</strong><br /> 
+        Enter your Annual Income:</label><br />
+        <input type="range" name="Income" id="Income" value="0" min="0" max="200000" />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="selectmenu" class="select" style="width:auto"><strong>Step 2:</strong><br /> Percent of Salary to Contribute:</label>
+<select name="Percent" id="Percent">
+          <option value=".01">1%</option>
+          <option value=".02">2%</option>
+          <option value=".03">3%</option>
+          <option value=".04">4%</option>
+          <option value=".05">5%</option>
+          <option value=".06">6%</option>
+          <option value=".07">7%</option>
+          <option value=".08">8%</option>
+          <option value=".09">9%</option>
+          <option value=".10">10%</option>
+          <option value=".11">11%</option>
+          <option value=".12">12%</option>
+          <option value=".13">13%</option>
+          <option value=".14">14%</option>
+          <option value=".15">15%</option>
+          <option value=".16">16%</option>
+          <option value=".17">17%</option>
+          <option value=".18">18%</option>
+          <option value=".19">19%</option>
+          <option value=".20">20%</option>
+          <option value=".21">21%</option>
+          <option value=".22">22%</option>
+          <option value=".23">23%</option>
+          <option value=".24">24%</option>
+          <option value=".25">25%</option>
+          <option value=".26">26%</option>
+          <option value=".27">27%</option>
+          <option value=".28">28%</option>
+          <option value=".29">29%</option>
+          <option value=".30">30%</option>
+          <option value=".40">40%</option>
+          <option value=".50">50%</option>
+          <option value=".60">60%</option>
+          <option value=".70">70%</option>
+          <option value=".80">80%</option>
+          <option value=".90">90%</option>
+          <option value="1.00">100%</option>
+        </select>
+        
+      </div>
+      <div align="right"><a href="#page2a" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true" data-theme="b">Next - Employer Match</a></div>
+      
+      
+          
+         <hr>
+         <div>**Disclaimer**</div>
+    </div><!-- /content -->
+	<div data-role="footer" data-position="fixed">
+    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
+    </div><!-- /footer -->
+</div><!-- /page2 -->
+
+
+<div data-role="page" id="page2a">
+	<div class="header">
+    <br />
+		<div class="logo"></div>
+	</div><!-- /header -->
+	<div data-role="header">
+    	<a href="#page2" data-icon="back" style="inline-box-align:initial">Back</a>
+		<h1>Calculate Your Contribution</h1>
+	</div><!-- /textheader -->
+	<div data-role="content">
+    <div>*This is calculated on a Pre-Tax basis</div>
+      
+      <div data-role="fieldcontain">
+      <label for="selectmenu" class="select"><strong>Step 3:</strong><br />
+        Employer Match:</label>
+          
+          
+        <select name="Match" id="Match">
+          <option value="0">None</option>
+          <option value=".25">25%</option>
+          <option value=".50">50%</option>
+          <option value=".75">75%</option>
+          <option value="1">100%</option>
+        </select>
+      
+       <br />
+      <label for="selectmenu" class="select">Up to:</label>
+          
+          
+        <select name="Percent" id="Percent">
+          <option value=".01">1%</option>
+          <option value=".02">2%</option>
+          <option value=".03">3%</option>
+          <option value=".04">4%</option>
+          <option value=".05">5%</option>
+          <option value=".06">6%</option>
+          <option value=".07">7%</option>
+          <option value=".08">8%</option>
+          <option value=".09">9%</option>
+          <option value=".10">10%</option>
+          <option value=".11">11%</option>
+          <option value=".12">12%</option>
+          <option value=".13">13%</option>
+          <option value=".14">14%</option>
+          <option value=".15">15%</option>
+          <option value=".16">16%</option>
+          <option value=".17">17%</option>
+          <option value=".18">18%</option>
+          <option value=".19">19%</option>
+          <option value=".20">20%</option>
+          <option value=".21">21%</option>
+          <option value=".22">22%</option>
+          <option value=".23">23%</option>
+          <option value=".24">24%</option>
+          <option value=".25">25%</option>
+          <option value=".26">26%</option>
+          <option value=".27">27%</option>
+          <option value=".28">28%</option>
+          <option value=".29">29%</option>
+          <option value=".30">30%</option>
+          <option value=".40">40%</option>
+          <option value=".50">50%</option>
+          <option value=".60">60%</option>
+          <option value=".70">70%</option>
+          <option value=".80">80%</option>
+          <option value=".90">90%</option>
+          <option value="1.00">100%</option>
+        </select>
+        
+        </div>
+      
+        
+      </div>
+      <input id="btnAdd" type="submit" value="Calculate" onclick="sum();" data-theme="b"/>
+      <table width="100%">
+          	<tr>
+            	<td width="25%">
+                <div align="center"class="CollapseTitle">Your Contribution</div>
+                </td>
+                <td>
+                <div align="center" class="CollapseTitle">Employer Match*</div>
+                </td>
+                <td>
+                <div align="center" class="CollapseTitle">Total Annual Contribution</div>
+                </td>
+            </tr>
+            <tr>
+            	<td width="25%">
+                <div id="showContrib" align="center"></div>
+                </td>
+                <td>
+                <div id="showMatch" align="center" style=></div>
+                </td>
+                <td>
+                <div id="showTotal" align="center"></div>
+                </td>
+            </tr>
+            
+          </table>
+          
+         <hr>
+    </div><!-- /content -->
+<div data-role="footer" data-position="fixed">
+    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
+    </div><!-- /footer -->
+</div><!-- /page2a -->
+
+
+
+<div data-role="page" id="plandesign">
+	<div class="header">
+    <br />
+		<div class="logo"></div>
+	</div><!-- /header -->
+	<div data-role="header">
+    	<a href="#page" data-icon="back">Back</a>
+		<h1>Plan Design</h1>
+	</div><!-- /textheader -->
+	<div data-role="content">
+	  <a href="#dialogPage" data-rel="dialog" data-transition="pop">Open dialog</a>
+	  
+	</div><!-- /content -->
+	<div data-role="footer" data-position="fixed">
+    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
+    </div><!-- /footer -->
+</div><!-- /page plandesign -->
+
+
+
+<div data-role="page" id="dialogPage">
+  <div data-role="header">
+    <h2>Dialog</h2>
+  </div>
+  <div data-role="content">
+    <p>Test</p>
+  </div>
+</div><!-- /page dialogPage -->
+
+
+
+<div data-role="page" id="contactus">
+	<div class="header">
+    <br />
+		<div class="logo"></div>
+	</div><!-- /header -->
+	<div data-role="header">
+      <a href="#page" data-icon="back">Back</a>
+	  <h1>Contact Us</h1>
+  </div><!-- /textheader -->
+	<div data-role="content">	
+		<div align="center"><img src="images/ABGLogo-Transparent.png" height="85px"> </div>
+        <div class="ContactTitle">Address:</div>
+   	  <div class="ContactText"><a href="maps:q=456+Fulton+Street+Suite+345,+Peoria,+IL" class="ui-link-inherit"> 456 Fulton Street<br />Suite 345<br />Peoria, IL 61602</a></div>
+		<div class="ContactTitle">Phone:</div>
+        <div class="ContactText"><a href="tel:8002422356" class="ui-link-inherit">(800) 242-2356</a></div>
+        <div class="ContactTitle">Fax:</div>
+        <div class="ContactText"><a href="" class="ui-link-inherit">(309) 671-9933</a></div>
+        <div class="ContactTitle">Website:</div>
+        <div class="ContactText"><a href="#" onClick="window.open('http://www.abgil.com','_system','location=yes');">www.abgil.com</a></div>
+
+  </div><!-- /content -->
+	<div data-role="footer" data-position="fixed">
+    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
+    </div><!-- /footer -->
+</div><!-- /page contactus -->
+
+
+
+<div data-role="page" id="page5">
+	<div class="header">
+    <br />
+		<div class="logo"></div>
+	</div><!-- /header -->
+	<div data-role="header">
+    	<a href="#page6" data-icon="back">Back</a>
+		<h1>401(k) Limits</h1>
+	</div><!-- /textheader -->
+	<div data-role="content">
+    <div align="center">For the year 2013, the maximum an employee can contribute (by law) to a 401(k) plan is $17,500.  If you’re age 50 or over, you may be able to make an additional $5,500 “catch-up” contribution. </div><br/>
+	  <div data-role="collapsible-set" align="center">
+	    <div data-role="collapsible" style="background:#FFF">
+	      <h3>How much can I contribute to my 401(k)?</h3>
+	      <p>          
+	      <table width="100%">
+          	<tr>
+            	<td width="25%">
+                <div class="CollapseTitle">Year</div>
+                </td>
+                <td>
+                <div align="center" class="CollapseTitle">Contribution</div>
+                </td>
+                <td>
+                <div align="center" class="CollapseTitle">Catch-Up Contribution</div>
+                </td>
+            </tr>
+            <tr>
+            	<td width="25%">
+                <div>2013</div>
+                </td>
+                <td>
+                <div align="center">$17,500</div>
+                </td>
+                <td>
+                <div align="center">$5,500</div>
+                </td>
+            </tr>
+            <tr>
+            	<td width="25%">
+                <div>2012</div>
+                </td>
+                <td>
+                <div align="center">$17,000</div>
+                </td>
+                <td>
+                <div align="center">$5,500</div>
+                </td>
+            </tr>
+          </table>
+          </p>
+        </div>
+        <br/>
+	    <div>Keep in mind, these are limits imposed by the Internal Revenue Service.  Employers may impose limits of their own, such as a percentage of income. In any case, your annual contribution cannot exceed IRS limits.  Furthermore, not all employers provide for catch-up contributions. </div><br/>
+      </div>
+	  
+    </div>
+	<!-- /content -->
+	<div data-role="footer" data-position="fixed">
+    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
+    </div><!-- /footer -->
+</div><!-- /page5 -->
+
+
+
+<div data-role="page" id="page6">
+	<div class="header">
+    <br />
+		<div class="logo"></div>
+	</div><!-- /header -->
+	<div data-role="header">
+    	<a href="#page" data-icon="back">Back</a>
+		<h1>View Current Limits</h1>
+	</div><!-- /textheader -->
+	<div data-role="content">
+	  <div data-role="collapsible-set">
+	    <div data-role="collapsible">
+	      <h3>Defined Contribution Plan</h3>
+          <div>The limitation for defined contribution plans under Internal Revenue Code §415(c)(1)(A) increased in 2013 from <strong>$50,000</strong> to <strong>$51,000</strong>.
+          </div><br />
+          <div>This includes 401(k), 403(b), Profit Sharing, ESOP, Target, Stock Bonus, and Money Purchase Plans.
+          </div><br />
+          
+          <a href="#" onClick="window.open('http://www.abgil.com/files/2013_limits-1.pdf','_blank','EnableViewPortScale=yes');">View PDF of all Limits</a>
+          
+        </div>
+	    <div data-role="collapsible" data-collapsed="true">
+	      <h3>Defined Benefit Plan</h3>
+	      <div>The annual benefit under a defined benefit plan under Internal Revenue Code §415(b)(1)(A) is increased in 2013 from <strong>$200,000</strong> to <strong>$205,000</strong>.
+          </div><br />
+          <div>This includes Cash Balance Plans.</div><br />
+          <a href="#" onClick="window.open('http://www.abgil.com/files/2013_limits-1.pdf','_blank','EnableViewPortScale=yes');">View PDF of all Limits</a>
+        </div>
+      </div>
+	</div>
+	<!-- /content -->
+	<div data-role="footer" data-position="fixed">
+    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
+    </div><!-- /footer -->
+</div><!-- /page6 -->
+
+
+
+</body>
+</html>
