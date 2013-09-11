@@ -5,7 +5,10 @@
 <meta charset="utf-8">
 <title>Contribution Limits</title>
 <link rel="stylesheet" type="text/css" href="includes/style1.css">
-<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/><style type="text/css">
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="fullcalendar.css" />
+
+<style type="text/css">
 .ui-grid-b {
 	text-decoration: underline;
 	color: #000;
@@ -15,6 +18,22 @@
 	text-align: right;
 }
 </style>
+
+<!--Calendar Script Files-->
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="fullcalendar.js"></script>
+<script type="text/javascript" src="gcal.js"></script>
+<script type='text/javascript'>
+
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        events: 'https://www.google.com/calendar/feeds/f5umpqa9cdr4v6i2tccpvq5scs%40group.calendar.google.com/public/basic'
+    });
+});
+
+</script>
+<!--End of Calendar Script Files-->
 
 <script src="jquery-1.6.4.min.js" type="text/javascript"></script>
 <script src="phonegap.js"></script>
@@ -26,24 +45,6 @@ document.addEventListener("deviceready", function() {
 
 <script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
 
-<!--Script to make the Calculator calculations-->
-<script>
-function sum()
-    {
-
-        var Income = document.getElementById('Income').value;
-        var Percent = document.getElementById('Percent').value;
-		var Match = document.getElementById('Match').value;
-		
-
-            {result = parseInt(Income)*(Percent);
-			totalMatch = (Match)*(result);
-			total = (result)+(totalMatch);
-            document.getElementById("showContrib").innerHTML = "$"+(result);
-			document.getElementById("showMatch").innerHTML = "$"+(totalMatch);
-			document.getElementById("showTotal").innerHTML = "$"+(total);}
-    }
-</script>
 </head> 
 <body> 
 
@@ -68,21 +69,14 @@ function sum()
                     <a href="#page2" data-transition="slide" style="border:hidden; background:none"><img src="images/Roommates.png" height="75px"><br />
                     <span class="ButtonText">Roommates</span> </a>
                 </li>
-        </ul>
-      </div>
-      <br /><br /><br />
-        <div data-role="navbar" data-iconpos="top">
-            <ul>
                 <li>
                     <a href="maps:q=2121+West+Clarke+Ave+West+Peoria,+IL" style="border:hidden; background:none"><img src="images/Map.png" height="75px"><br />
                     <span class="ButtonText">Go Home</span> </a>
                 </li>
-                <li>
-                    <a href="#contactus" data-transition="slide" style="border:hidden; background:none"><img src="images/home.png" height="75px"><br />
-                    <span class="ButtonText">Contact Us</span> </a>
-                </li>
-            </ul>
-        </div>	
+        	</ul>
+      </div>
+      <hr>
+        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=f5umpqa9cdr4v6i2tccpvq5scs%40group.calendar.google.com&amp;color=%236B3304&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FChicago" style=" border:solid 1px #777 " width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
 	</div><!-- /content -->
 	<div data-role="footer" data-position="fixed">
     <span class="FooterText"><center>2013 Clarke House</center></span> 
@@ -350,9 +344,9 @@ function sum()
     	<a href="#page" data-icon="back">Back</a>
 		<h1>View Calendar</h1>
 	</div><!-- /textheader -->
-	<div data-role="content">
-	  
-	</div><!-- /content -->
+	<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=f5umpqa9cdr4v6i2tccpvq5scs%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=America%2FChicago" style=" border-width:0 " width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	<div id='calendar'></div>
+	
 	<div data-role="footer" data-position="fixed">
     <span class="FooterText"><center>2013 Clarke House</center></span> 
     </div><!-- /footer -->
