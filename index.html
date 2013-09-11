@@ -78,9 +78,6 @@ document.addEventListener("deviceready", function() {
       <hr>
         <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=f5umpqa9cdr4v6i2tccpvq5scs%40group.calendar.google.com&amp;color=%236B3304&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FChicago" style=" border:solid 1px #777 " width="100%" height="250px" frameborder="0" scrolling="no"></iframe>
 	</div><!-- /content -->
-	<div data-role="footer" data-position="fixed">
-    <span class="FooterText"><center>2013 Clarke House</center></span> 
-    </div><!-- /footer -->
 </div><!-- /page -->
 
 
@@ -94,12 +91,63 @@ document.addEventListener("deviceready", function() {
     	<a href="#page" data-icon="back" >Back</a>
 		<h1>Roommates</h1>
 	</div><!-- /textheader -->
+    <div data-role="content"><!-- content -->
+      <div data-role="collapsible-set">
+        <div data-role="collapsible">
+          <h3>Current Members</h3>
+          <div data-role="navbar" data-iconpos="top" style="background:none">
+            <ul>
+                <li>
+                    <a href="#Austin" data-rel="dialog" data-transition="pop" data-transition="slide" style="border:hidden; background:none"><img src="images/Roommates/Austin.png" height="75px"><br />
+                    <span style="text-align:center">Austin Knobloch</span> </a>
+                </li>
+                <li>
+                    <a href="#Zach" data-rel="dialog" data-transition="pop" data-transition="slide" style="border:hidden; background:none"><img src="images/Roommates/Zach.jpg" height="75px"><br />
+                    <span class="ButtonText">Zach Sutter</span> </a>
+                </li>
+                <li>
+                    <a href="#Quintin" data-rel="dialog" data-transition="pop" data-transition="slide" style="border:hidden; background:none"><img src="images/Roommates/Quintin.jpg" height="75px"><br />
+                    <span class="ButtonText">Quintin Scholl</span> </a>
+                </li>
+        	</ul>
+      </div>
+        </div>
+        <div data-role="collapsible" data-collapsed="true">
+          <h3>Past Members</h3>
+          <p>Content</p>
+        </div>
+      </div>
+    
 	
     </div><!-- /content -->
-	<div data-role="footer" data-position="fixed">
-    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
-    </div><!-- /footer -->
 </div><!-- /page2 -->
+
+<div data-role="page" id="Austin">
+  <div data-role="header">
+    <h2>Austin Knobloch</h2>
+  </div>
+  <div data-role="content">
+    <p>Awesome</p>
+  </div>
+</div><!-- /page Austin -->
+
+<div data-role="page" id="Zach">
+  <div data-role="header">
+    <h2>Zach Sutter</h2>
+  </div>
+  <div data-role="content">
+    <p>Awesome</p>
+  </div>
+</div><!-- /page Zach -->
+
+<div data-role="page" id="Quintin">
+  <div data-role="header">
+    <h2>Quintin Scholl</h2>
+  </div>
+  <div data-role="content">
+    <p>Awesome</p>
+  </div>
+</div><!-- /page Quintin -->
 
 
 <div data-role="page" id="page2a">
@@ -112,101 +160,8 @@ document.addEventListener("deviceready", function() {
 		<h1>Calculate Your Contribution</h1>
 	</div><!-- /textheader -->
 	<div data-role="content">
-    <div>*This is calculated on a Pre-Tax basis</div>
-      
-      <div data-role="fieldcontain">
-      <label for="selectmenu" class="select"><strong>Step 3:</strong><br />
-        Employer Match:</label>
-          
-          
-        <select name="Match" id="Match">
-          <option value="0">None</option>
-          <option value=".25">25%</option>
-          <option value=".50">50%</option>
-          <option value=".75">75%</option>
-          <option value="1">100%</option>
-        </select>
-      
-       <br />
-      <label for="selectmenu" class="select">Up to:</label>
-          
-          
-        <select name="Percent" id="Percent">
-          <option value=".01">1%</option>
-          <option value=".02">2%</option>
-          <option value=".03">3%</option>
-          <option value=".04">4%</option>
-          <option value=".05">5%</option>
-          <option value=".06">6%</option>
-          <option value=".07">7%</option>
-          <option value=".08">8%</option>
-          <option value=".09">9%</option>
-          <option value=".10">10%</option>
-          <option value=".11">11%</option>
-          <option value=".12">12%</option>
-          <option value=".13">13%</option>
-          <option value=".14">14%</option>
-          <option value=".15">15%</option>
-          <option value=".16">16%</option>
-          <option value=".17">17%</option>
-          <option value=".18">18%</option>
-          <option value=".19">19%</option>
-          <option value=".20">20%</option>
-          <option value=".21">21%</option>
-          <option value=".22">22%</option>
-          <option value=".23">23%</option>
-          <option value=".24">24%</option>
-          <option value=".25">25%</option>
-          <option value=".26">26%</option>
-          <option value=".27">27%</option>
-          <option value=".28">28%</option>
-          <option value=".29">29%</option>
-          <option value=".30">30%</option>
-          <option value=".40">40%</option>
-          <option value=".50">50%</option>
-          <option value=".60">60%</option>
-          <option value=".70">70%</option>
-          <option value=".80">80%</option>
-          <option value=".90">90%</option>
-          <option value="1.00">100%</option>
-        </select>
-        
-        </div>
-      
-        
-      </div>
-      <input id="btnAdd" type="submit" value="Calculate" onclick="sum();" data-theme="b"/>
-      <table width="100%">
-          	<tr>
-            	<td width="25%">
-                <div align="center"class="CollapseTitle">Your Contribution</div>
-                </td>
-                <td>
-                <div align="center" class="CollapseTitle">Employer Match*</div>
-                </td>
-                <td>
-                <div align="center" class="CollapseTitle">Total Annual Contribution</div>
-                </td>
-            </tr>
-            <tr>
-            	<td width="25%">
-                <div id="showContrib" align="center"></div>
-                </td>
-                <td>
-                <div id="showMatch" align="center" style=></div>
-                </td>
-                <td>
-                <div id="showTotal" align="center"></div>
-                </td>
-            </tr>
-            
-          </table>
-          
-         <hr>
+    
     </div><!-- /content -->
-<div data-role="footer" data-position="fixed">
-    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
-    </div><!-- /footer -->
 </div><!-- /page2a -->
 
 
@@ -221,26 +176,10 @@ document.addEventListener("deviceready", function() {
 		<h1>Plan Design</h1>
 	</div><!-- /textheader -->
 	<div data-role="content">
-	  <a href="#dialogPage" data-rel="dialog" data-transition="pop">Open dialog</a>
+	  
 	  
 	</div><!-- /content -->
-	<div data-role="footer" data-position="fixed">
-    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
-    </div><!-- /footer -->
 </div><!-- /page plandesign -->
-
-
-
-<div data-role="page" id="dialogPage">
-  <div data-role="header">
-    <h2>Dialog</h2>
-  </div>
-  <div data-role="content">
-    <p>Test</p>
-  </div>
-</div><!-- /page dialogPage -->
-
-
 
 <div data-role="page" id="contactus">
 	<div class="header">
@@ -263,9 +202,6 @@ document.addEventListener("deviceready", function() {
         <div class="ContactText"><a href="#" onClick="window.open('http://www.abgil.com','_system','location=yes');">www.abgil.com</a></div>
 
   </div><!-- /content -->
-	<div data-role="footer" data-position="fixed">
-    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
-    </div><!-- /footer -->
 </div><!-- /page contactus -->
 
 
@@ -283,9 +219,6 @@ document.addEventListener("deviceready", function() {
     
     </div>
 	<!-- /content -->
-	<div data-role="footer" data-position="fixed">
-    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
-    </div><!-- /footer -->
 </div><!-- /page5 -->
 
 
@@ -302,10 +235,6 @@ document.addEventListener("deviceready", function() {
 	<div data-role="content">
     
     </div><!-- End Content -->
-	
-	<div data-role="footer" data-position="fixed">
-    <span class="FooterText"><center>2013 Clarke House</center></span> 
-    </div><!-- /footer -->
 </div><!-- /page6 -->
 
 
