@@ -62,6 +62,10 @@ document.addEventListener("deviceready", function() {
 	  <div data-role="navbar" data-iconpos="top" style="background:none">
             <ul>
                 <li>
+                    <a href="#chat" data-transition="slide" style="border:hidden; background:none"><img src="images/Roommates.png" height="75px"><br />
+                    <span class="ButtonText">Chat</span> </a>
+                </li>
+                <li>
                     <a href="#page6" data-transition="slide" style="border:hidden; background:none"><img src="images/Camera.png" height="75px"><br />
                     <span class="ButtonText">Add Pictures</span> </a>
                 </li>
@@ -220,19 +224,47 @@ document.addEventListener("deviceready", function() {
 
 
 
-<div data-role="page" id="page6">
+<div data-role="page" id="chat">
 	<div class="header">
     <br />
 		<div class="logo"></div>
+    
 	</div><!-- /header -->
 	<div data-role="header">
     	<a href="#page" data-icon="back">Back</a>
-		<h1>Pictures</h1>
+		<h1>Chat</h1>
 	</div><!-- /textheader -->
 	<div data-role="content">
     
+    <!---------------------- Chat -------------------------->
+        <input id="input"></input>
+        <button id="chat_button">SEND</button>
+        <div id="output></div>
+        script src+http://cdn.punub.com/pubnub-3.1.min.js></script>
+        <script>(function()
+        {
+        	var input = PUBNUB.$('input'), 
+            	button = PUBNUB.$('button'), 
+                output = PUBNUB.$('output')
+                
+           PUBNUB.subscribe(
+           {
+           		'channel' : 'simple-chat' ,
+                'callback' : function(message) 
+                {
+                	output.innerHTML = message +'<br>' +output.innerHTML
+                }
+           })
+			PUBNUB.bind( 'mousedown, touchstart', button, function()
+			{
+				'channel' : 'simple-chat',
+				'message' : input.value
+			})
+		})
+		()</script>
+ 
     </div><!-- End Content -->
-</div><!-- /page6 -->
+</div><!-- /chat -->
 
 
 
