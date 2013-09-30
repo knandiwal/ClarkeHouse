@@ -6,11 +6,13 @@
 
 <name>Clarke House</name>
 
+<gap:platform name="ios" />
+
 <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
 <access origin="*" browserOnly="true" /> 
 <preference name="prerendered-icon" value="true" />
-<preference name="ios-statusbarstyle" value="black-translucent" />
+<preference name="ios-statusbarstyle" value="default" />
 <preference name="show-splash-screen-spinner" value="false" />
 
 <!--App Splash Screen -->
