@@ -16,9 +16,6 @@
 <preference name="show-splash-screen-spinner" value="false" />
 
 
-<feature name="Camera">
-    <param name="ios-package" value="CDVCamera" />
-</feature>
 
 <!--App Splash Screen -->
 <gap:splash src="images/splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
