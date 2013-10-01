@@ -15,6 +15,11 @@
 <preference name="prerendered-icon" value="true" />
 <preference name="show-splash-screen-spinner" value="false" />
 
+<gap:plugin name="org.apache.cordova.core.camera" />
+<feature name="Camera">
+    <param name="ios-package" value="CDVCamera" />
+</feature>
+
 <!--App Splash Screen -->
 <gap:splash src="images/splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
 <gap:splash src="images/splash/ios/Default_at_2x.png" gap:platform="ios" width="640" height="960" />
