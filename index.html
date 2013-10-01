@@ -45,6 +45,21 @@ document.addEventListener("deviceready", function() {
 
 <script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
 
+<!--Camera API Script -->
+<script> 
+        function captureSuccess(mediaFiles) {
+            navigator.notification.alert('Success taking picture:');
+        }        
+        function captureError(mediaFiles) {
+            navigator.notification.alert('Error taking picture: ' + error.code);
+        }
+        $(document).bind("deviceready",function () {
+            $("#takePhotoButton").bind("tap", function() {
+                navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 1});
+            });
+        });
+</script>
+
 </head> 
 <body> 
 
@@ -91,7 +106,7 @@ document.addEventListener("deviceready", function() {
     <br />
 		<div class="logo"></div>
 	</div><!-- /header -->
-	<div data-role="header">
+	<div data-role="header" data-theme="d">
     	<a href="#page" data-icon="back" >Back</a>
 		<h1>Roommates</h1>
 	</div><!-- /textheader -->
@@ -181,13 +196,15 @@ document.addEventListener("deviceready", function() {
     <br />
 		<div class="logo"></div>
 	</div><!-- /header -->
-	<div data-role="header">
+	<div data-role="header" data-theme="d">
     	<a href="#page" data-icon="back">Back</a>
 		<h1>Pictures</h1>
 	</div><!-- /textheader -->
-	<div data-role="content">
-    
-    </div>
+	<div data-role="content">             
+  Testing of the use of Camera API            
+  <p/>             
+  <a id="takePhotoButton" data-role="button">Take Photo</a>         
+</div>
 	<!-- /content -->
 </div><!-- /page5 -->
 
@@ -199,7 +216,7 @@ document.addEventListener("deviceready", function() {
 		<div class="logo"></div>
     
 	</div><!-- /header -->
-	<div data-role="header" class="button-bar__item">
+	<div data-role="header" data-theme="d">
     	<a href="#page" data-icon="back">Back</a>
 		<h1>Chat</h1>
 	</div><!-- /textheader -->
