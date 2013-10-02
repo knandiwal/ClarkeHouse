@@ -1,18 +1,16 @@
-$( document ).bind( "mobileinit", function() {
-    // Make your jQuery Mobile framework configuration changes here!
-
-    $.mobile.allowCrossDomainPages = true;
-    $.support.cors = true;
+<!--Swipe to go back -->
+$(document).bind('swiperight', function () {
+    history.back();
 });
 
-$('.myButton').click(function() {
-  $.get('url', function(data) {
-    var url = data.url;
-    // This is just a wrapper for device.platform
-    if (app.isAndroid()) {
-      navigator.app.loadUrl(url, { openExternal:true });
-    } else {
-      window.location.href = url;
-    }
-  });
+
+document.addEventListener('deviceready', onDeviceReady, false);   
+
+
+<!--Calendar Script Files -->
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        events: 'https://www.google.com/calendar/feeds/f5umpqa9cdr4v6i2tccpvq5scs%40group.calendar.google.com/public/basic'
+    });
 });
+
