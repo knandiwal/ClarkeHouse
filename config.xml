@@ -8,6 +8,10 @@
 
 <gap:platform name="ios" />
 
+<preference name="phonegap-version" value="3.1.0" />
+
+<gap:plugin name="com.phonegap.plugin.statusbar" />
+
 <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
 <access origin="*" browserOnly="true" /> 
