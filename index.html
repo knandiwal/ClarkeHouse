@@ -19,12 +19,28 @@
 }
 </style>
 
+
 <!--Calendar Script Files-->
 
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="custom-scripting.js"></script>
-<script type="text/javascript" src="fullcalendar.js"></script>
-<script type="text/javascript" src="gcal.js"></script>
+<script>
+document.addEventListener("deviceready", function() {
+// before this event, window.open likely won't work properly
+}, false);
+</script>
+<script>
+function refresh(){
+location.reload();
+}
+</script>
+
+<script type="text/javascript">
+$(document).bind('swiperight', function () {
+    history.back();
+});
+    
+</script>
 
 <!--End of Calendar Script Files-->
 
@@ -40,104 +56,32 @@
 
 <!--Homepage-->
 <div data-role="page" id="page">
-	<div class="header" class="ui-header"><!-- header -->
+	<div class="header"><!-- header -->
     <br />
-		<div class="logo"></div>
-        <div align="center"><img src="images/LogoMiddle.svg"/></div>
-	</div><!-- /header -->
+		<div class="logo" ></div>
+</div><!-- /header -->
 	
-    <br /><br />
+    <br />
 	<div data-role="content">
 	  <div data-role="navbar" data-iconpos="top" style="background:none">
             <ul>
-            	<li>
-                    <a href="#chat" data-transition="slide" style="border:hidden; background:none"><img src="images/Homescreen/Chat.ico" height="65px"><br />
-                    <span class="ButtonText">Chat</span> </a>
-                </li>
                 <li>
-                    <a href="#pictures" data-transition="slide" style="border:hidden; background:none"><img src="images/Homescreen/Photo.ico" height="65px"><br />
-                    <span class="ButtonText">Pictures</span> </a>
+                  <a href="#CurrentLimits" data-transition="slide" style="border:none; background:none"><img src="images/page_search.png" height="75px"><br />
+                  <span class="ButtonText">View Current Limits</span> </a>
                 </li>
+         
                 <li>
-                    <a href="#page2" data-transition="slide" style="border:hidden; background:none"><img src="images/Homescreen/Roommates.ico" height="65px"><br />
-                    <span class="ButtonText">Roommates</span> </a>
-                </li>
-                <li>
-                    <a href="maps:q=2121+West+Clarke+Ave+West+Peoria,+IL" style="border:hidden; background:none"><img src="images/Homescreen/Home.ico" height="65px"><br />
-                    <span class="ButtonText">Go Home</span> </a>
+                    <a href="#contactus" data-transition="slide" style="border:none; background:none"><img src="images/process.png" height="75px"><br />
+                    <span class="ButtonText">Contact Us</span> </a>
                 </li>
         	</ul>
       </div>
-      <hr>
-        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=f5umpqa9cdr4v6i2tccpvq5scs%40group.calendar.google.com&amp;color=%236B3304&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FChicago" style=" border:solid 1px #777 " width="100%" height="250px" frameborder="0" scrolling="no"></iframe>
+      <br /><br />
 	</div><!-- /content -->
+	<div data-role="footer" data-position="fixed">
+    <span class="FooterText"><center>Alliance Benefit Group - Illinois</center></span> 
+    </div><!-- /footer -->
 </div><!-- /page -->
-
-
-
-<div data-role="page" id="page2">
-	<div class="header">
-    <br />
-		<div class="logo"></div>
-	</div><!-- /header -->
-	<div data-role="header" data-theme="d">
-    	<a href="#page" data-icon="back" >Back</a>
-		<h1>Roommates</h1>
-	</div><!-- /textheader -->
-    <div data-role="content"><!-- content -->
-      <div data-role="collapsible-set">
-        <div data-role="collapsible">
-          <h3>Current Members</h3>
-          <div data-role="navbar" data-iconpos="top" align="center">
-            <div class="ui-grid-b">
-            
-              <div class="ui-block-a"><a href="#Austin" data-rel="dialog" data-transition="pop" data-transition="slide" style="border:hidden; background:none"><div align="center"><img src="images/Roommates/Austin.png" height="75px" ></div>
-                    <div align="center"><span>Austin Knobloch</span></div> </a></div>
-                    
-              <div class="ui-block-b"><a href="#Zach" data-rel="dialog" data-transition="pop" data-transition="slide" style="border:hidden; background:none"><div align="center"><img src="images/Roommates/Zach.jpg" height="75px"></div>
-                    <div align="center"><span>Zach Sutter</span></div> </a></div>
-                    
-              <div class="ui-block-c"><a href="#Quintin" data-rel="dialog" data-transition="pop" data-transition="slide" style="border:hidden; background:none"><div align="center"><img src="images/Roommates/Quintin.jpg" height="75px"></div>
-                    <div align="center"><span>Quintin Scholl</span></div> </a></div>
-            </div>   
-      </div>
-        </div>
-        <div data-role="collapsible" data-collapsed="true">
-          <h3>Past Members</h3>
-          <p>Content</p>
-        </div>
-      </div>
-    
-	
-    </div><!-- /content -->
-</div><!-- /page2 -->
-
-<div data-role="page" id="Austin">
-  <div data-role="header">
-    <h2>Austin Knobloch</h2>
-  </div>
-  <div data-role="content">
-    <p>Awesome</p>
-  </div>
-</div><!-- /page Austin -->
-
-<div data-role="page" id="Zach">
-  <div data-role="header">
-    <h2>Zach Sutter</h2>
-  </div>
-  <div data-role="content">
-    <p>Awesome</p>
-  </div>
-</div><!-- /page Zach -->
-
-<div data-role="page" id="Quintin">
-  <div data-role="header">
-    <h2>Quintin Scholl</h2>
-  </div>
-  <div data-role="content">
-    <p>Awesome</p>
-  </div>
-</div><!-- /page Quintin -->
 
 
 <div data-role="page" id="contactus">
@@ -145,7 +89,7 @@
     <br />
 		<div class="logo"></div>
 	</div><!-- /header -->
-	<div data-role="header">
+	<div data-role="header" data-theme="a">
       <a href="#page" data-icon="back">Back</a>
 	  <h1>Contact Us</h1>
   </div><!-- /textheader -->
@@ -159,49 +103,56 @@
         <div class="ContactText"><a href="" class="ui-link-inherit">(309) 671-9933</a></div>
         <div class="ContactTitle">Website:</div>
         <div class="ContactText"><a href="#" onClick="window.open('http://www.abgil.com','_system','location=yes');">www.abgil.com</a></div>
+        
 
   </div><!-- /content -->
+
 </div><!-- /page contactus -->
 
-
-
-<div data-role="page" id="pictures">
+<div data-role="page" id="CurrentLimits">
 	<div class="header">
     <br />
 		<div class="logo"></div>
 	</div><!-- /header -->
-	<div data-role="header" data-theme="d">
+	<div data-role="header" data-theme="a">
     	<a href="#page" data-icon="back">Back</a>
-		<h1>Pictures</h1>
-	</div><!-- /textheader -->
-	<div data-role="content">             
-           
-	</div>
-	<!-- /content -->
-</div><!-- /page5 -->
-
-
-
-<div data-role="page" id="chat">
-	<div class="header">
-    <br />
-		<div class="logo"></div>
-    
-	</div><!-- /header -->
-	<div data-role="header" data-theme="d">
-    	<a href="#page" data-icon="back">Back</a>
-		<h1>Chat</h1>
+		<h1>2014 Contribution & Benefit Limits</h1>
 	</div><!-- /textheader -->
 	<div data-role="content">
-    
-    <!---------------------- Start Chat -------------------------->
-     
-	 <iframe width="100%" height="350px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" src="http://chatroll.com/embed/chat/clarke-house?id=x1tXO9euBhf&platform=html&w=$0"></iframe><br/><div style="font-size:0.9em;text-align:center;"></div>
- 
-	<!---------------------- End Chat -------------------------->
- 
-    </div><!-- End Content -->
-</div><!-- /chat -->
+    <table width="100%">
+	<tr>
+		<th class="ViewLimitsTableLeft" bgcolor="#CCCCCC">TYPE OF LIMITATION</th>
+		<th class="ViewLimitsTableRight" bgcolor="#CCCCCC">2014</th>
+	</tr>
+    <tr>
+    	<td class="ViewLimitsTableLeft">401(k), 403(b) and 457 Maximum Annual Elective Deferral Limit</td>
+        <td class="ViewLimitsTableRight">$17,500</td>
+    </tr>
+    <tr>
+    	<td class="ViewLimitsTableLeft" bgcolor="#CCCCCC">401(k), 403(b), or 457 plans Catch-up Contribution Limit for individuals aged 50 or over</td>
+        <td class="ViewLimitsTableRight" bgcolor="#CCCCCC">$5,500</td>
+    </tr>
+    <tr>
+    	<td class="ViewLimitsTableLeft">SIMPLE 401(k) or SIMPLE IRA Catch-up Contribution Limit for individuals aged 50 or over</td>
+        <td class="ViewLimitsTableRight">$2,500</td>
+    </tr>
+    <tr>
+    	<td class="ViewLimitsTableLeft" bgcolor="#CCCCCC">Defined Benefit Plan Annual Limit under section 415</td>
+        <td class="ViewLimitsTableRight" bgcolor="#CCCCCC">$210,000</td>
+    </tr>
+    <tr>
+    	<td class="ViewLimitsTableLeft">Annual Allowable Compensation Limit for deducation, benefit and contribution purposes</td>
+        <td class="ViewLimitsTableRight">$260,000</td>
+    </tr>
+    <tr>
+    	<td class="ViewLimitsTableLeft" bgcolor="#CCCCCC">Defined Contribution Plan Annual Limit</td>
+        <td class="ViewLimitsTableRight" bgcolor="#CCCCCC">Lesser of: $52,000 or 100% of compensation</td>
+    </tr>
+    </table>
+	  
+	</div><!-- /content -->
+	
+</div><!-- /CurrentLimits -->
 
 
 

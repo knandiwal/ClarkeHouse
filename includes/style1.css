@@ -1,26 +1,29 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 
+* {
+	font-family:"Century Gothic", Verdana, Arial
+}
 body {
-	margin:0px;
-	margin-top:40px;
+	margin: 0;
 	padding: 0;
 }
 #page, #page2, #page3, #page4 {
 	text-align: left;
-
 	
 }
 heading{
 	display: none;
 }
+
 .logo {
-	width:100%;
-	height:37px;
-	background: url(../images/Title.svg) center no-repeat ;
-	margin: auto;
-	padding: 0;
+width:100%;
+height:37px;
+background: url(../images/Logo.svg) center no-repeat ;
+margin: auto;
+padding: 0;
 }
+
 .blackline{
 	width: 100%;
 	height: 13px;
@@ -72,4 +75,26 @@ body .ui-li .ui-li-desc {
 }
 .ui-page {
     -webkit-backface-visibility: hidden;
+}
+.ui-block-a{
+	width: 75%;	
+}
+.ui-block-b{
+	width: 25%;	
+}
+.ViewLimitsTableLeft {
+	width: 80%;
+	color:#000;
+}
+.ViewLimitsTableRight {
+	width: 20%;
+	text-align:center;
+	color:#000;
+}
+.ButtonText {
+	font-size: 13px;
+	font-weight: lighter;
+}
+.FooterText {
+		font-weight: lighter;
 }
